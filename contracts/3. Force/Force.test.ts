@@ -17,6 +17,7 @@ describe("Attacking Force", function () {
     await attacker.hackContract();
     const provider = waffle.provider;
     const balance = await provider.getBalance(victim.address);
+    console.log("balance ===>", balance);
     expect(balance).to.be.above(0);
   });
 });
